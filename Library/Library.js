@@ -23,7 +23,7 @@ function Library(){
     this.getAllBooks = function () {
         var shelves = this.getShelves();
         for (var shelfIndex in shelves) {
-            return shelves[shelfIndex].getBooks();
+            console.log(shelves[shelfIndex].getBooks());
         }
     };
 
@@ -118,11 +118,21 @@ book.enshelf(library, 0);
 
 book.getAllAttributes();
 
-//var anotherBook = new Book('JRR Tolkien', 'Lord Of The Rings', 'lib-1-LOTR-uniqueId');
-//anotherBook.enshelf(library, 0);
+var anotherBook = new Book({
+    author: 'JRR Tolkien',
+    title: 'Lord Of The Rings',
+    uniqueId: 'lib-1-LOTR-uniqueId'
+});
 
-//var nonFictionBook = new Book('Laura Hillenbrand', 'Unbroken', 'lib-1-U-uniqueId');
-//nonFictionBook.enshelf(library, 1);
+anotherBook.enshelf(library, 0);
+
+var nonFictionBook = new Book({
+    author: 'Laura Hillenbrand',
+    title: 'Unbroken',
+    uniqueId: 'lib-1-U-uniqueId'
+});
+nonFictionBook.enshelf(library, 1);
 
 library.getAllBooks();
 //anotherBook.unshelf(library, 0);
+//library.getAllBooks();
