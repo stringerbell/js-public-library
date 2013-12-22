@@ -107,23 +107,22 @@ var library = new Library();
 library.addShelf('Fiction');
 
 library.addShelf('Non Fiction');
-//, 'Harry Potter and the Sorcerer\'s Stone', 'lib-1-HP-uniqueId'
+
 var book = new Book({
     author: 'J.K. Rowling',
     title: 'Harry Potter and The Sorcerer\'s Stone',
     uniqueId: 'uniqueIdForFirstCopyOfHarryPotter'
     });
+
 book.enshelf(library, 0);
-book.title = "Fart face";
 
 book.getAllAttributes();
 
 //var anotherBook = new Book('JRR Tolkien', 'Lord Of The Rings', 'lib-1-LOTR-uniqueId');
 //anotherBook.enshelf(library, 0);
-//
+
 //var nonFictionBook = new Book('Laura Hillenbrand', 'Unbroken', 'lib-1-U-uniqueId');
 //nonFictionBook.enshelf(library, 1);
 
 library.getAllBooks();
-//
-////anotherBook.unshelf(library, 0);
+//anotherBook.unshelf(library, 0);
